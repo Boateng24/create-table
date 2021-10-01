@@ -1,0 +1,35 @@
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+INSERT INTO friends (id, name, birthday) VALUES(1, 'Ororo Munroe', '1940-05-30');
+
+INSERT INTO friends (id, name, birthday) VALUES(2, 'Kwame', '1945-06-28');
+
+INSERT INTO friends (id, name, birthday) VALUES(3, 'Rita', '1950-19-10');
+
+UPDATE TABLE friends
+SET name = 'Storm' 
+WHERE id = 1;
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+UPDATE TABLE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+
+DELETE FROM friends
+WHERE id = 1;
+
+UPDATE TABLE friends
+SET email = 'kwame@codecademy.com'
+WHERE id = 2;
+
+UPDATE TABLE friends
+SET email = 'rita@codecademy.com'
+WHERE id = 3;
+
+SELECT * FROM friends;
